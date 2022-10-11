@@ -1,0 +1,7 @@
+{
+  "name": "pokedex-jamees",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
