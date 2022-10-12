@@ -1,0 +1,34 @@
+<div class="pokedex">
+  <div class="pokedex-header">
+    <img width="100%" src="assets/pokedexup.svg">
+  </div>
+
+  <div class="pokemon-list">
+    <div class="header">
+      <span>Página: {{page + 1}}</span>
+      <span>Pokémons disponíveis: 1154</span>
+    </div>
+
+    <div class="pokemon" *ngFor="let pokemon of pokemonsDetailed; let i = index">
+      <div class="pokemon-header">
+        <span class="pokemon-number">{{formatID(pokemon?.id)}}</span>
+        <ion-icon (click)="saveFavorite(pokemon.id)" class="pokemon-favorite" [ngClass]="{'is-favorite': verifyIfIsFavorite(pokemon.id) === 'heart'}" [name]="verifyIfIsFavorite(pokemon.id)"></ion-icon>
+      </div>
+      <div class="pokemon-image">
+        <img height="80px" [src]="pokemon?.sprites?.other['official-artwork'].front_default">
+      </div>
+      <div class="pokemon-name">
+        <span>{{pokemon?.name}}</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="pokedex-footer">
+    <img width="100%" src="assets/pokedexdown.svg">
+    <div class="pagination-button">
+      <img class="button-icon" (click)="pageBack()" id="button-left" src="assets/back.svg">
+      <img class="button-icon" (click)="pageForward()" id="button-right" src="assets/forward.svg">
+    </div>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 {
   "name": "pokedex-jamees",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "Jamees David",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
@@ -19,12 +19,14 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
+    "@capacitor/android": "4.3.0",
     "@capacitor/app": "4.0.1",
     "@capacitor/core": "4.3.0",
     "@capacitor/haptics": "4.0.1",
     "@capacitor/keyboard": "4.0.1",
     "@capacitor/status-bar": "4.0.1",
     "@ionic/angular": "^6.1.9",
+    "@ionic/storage-angular": "^3.0.6",
     "ionicons": "^6.0.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
