@@ -8,18 +8,18 @@
 	.st2{fill:none;stroke:#C1000E;stroke-width:10;}
 </style>
 <g>
-	<rect x="41.1" y="29.6" class="st0" width="332.3" height="54.2"/>
+	<rect x="41.2" y="29.2" class="st0" width="332.3" height="54.2"/>
 </g>
 <g>
-	<path class="st1" d="M-0.2,10.2l162.6,32v40.5H-0.2V10.2z"/>
+	<path class="st1" d="M-0.1,9.8l162.6,32v40.5H-0.1V9.8z"/>
 </g>
 <g>
-	<rect x="-0.1" y="58.2" class="st1" width="413.8" height="56.2"/>
+	<rect y="57.8" class="st1" width="414" height="56.2"/>
 </g>
 <g>
-	<path class="st1" d="M414,10.2l-162.4,32v40.5H414V10.2z"/>
+	<path class="st1" d="M414.1,9.8l-162.4,32v40.5h162.4V9.8z"/>
 </g>
 <g>
-	<path class="st2" d="M38.4,63.8l118.1,20.1v7.4h102.3v-7.4l117.5-20.1"/>
+	<path class="st2" d="M38.5,63.4l118.1,20.1v7.4h102.3v-7.4l117.5-20.1"/>
 </g>
 </svg>

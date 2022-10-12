@@ -11,45 +11,45 @@
 	.st5{fill:#008E57;stroke:#000000;}
 </style>
 <g>
-	<rect x="0.1" y="1.1" class="st0" width="413.9" height="71"/>
+	<rect class="st0" width="414" height="71"/>
 </g>
 <g>
-	<rect x="0.1" y="54.8" class="st1" width="413.9" height="38"/>
+	<rect y="53.7" class="st1" width="414" height="38"/>
 </g>
 <g>
-	<path class="st0" d="M0.1,98.9l159-31.3V28H0.1V98.9z"/>
+	<path class="st0" d="M0,97.8l159-31.3V26.9H0V97.8z"/>
 </g>
 <g>
-	<circle class="st2" cx="68.7" cy="42.9" r="24.2"/>
+	<circle class="st2" cx="68.6" cy="41.8" r="24.2"/>
 </g>
 <g>
-	<circle class="st3" cx="117.1" cy="26.1" r="3.5"/>
+	<circle class="st3" cx="117" cy="25" r="3.5"/>
 </g>
 <g>
-	<circle class="st4" cx="128.4" cy="26.2" r="3.5"/>
+	<circle class="st4" cx="128.3" cy="25.1" r="3.5"/>
 </g>
 <g>
-	<circle class="st5" cx="139.7" cy="26" r="3.5"/>
+	<circle class="st5" cx="139.6" cy="24.9" r="3.5"/>
 </g>
-<rect x="106.3" y="40.2" class="st1" width="193.3" height="5.8"/>
+<rect x="106.2" y="39.1" class="st1" width="193.3" height="5.8"/>
 <g>
 	<g>
-		<circle class="st0" cx="266.2" cy="73.5" r="6.5"/>
+		<circle class="st0" cx="266.2" cy="72.4" r="6.5"/>
 	</g>
 	<g>
-		<circle class="st0" cx="189.5" cy="73.5" r="6.5"/>
+		<circle class="st0" cx="189.4" cy="72.4" r="6.5"/>
 	</g>
 	<g>
-		<circle class="st0" cx="228" cy="73.6" r="6.5"/>
+		<circle class="st0" cx="228" cy="72.5" r="6.5"/>
 	</g>
 	<g>
-		<circle class="st0" cx="343.1" cy="73.6" r="6.5"/>
+		<circle class="st0" cx="343.1" cy="72.5" r="6.5"/>
 	</g>
 	<g>
-		<circle class="st0" cx="304.7" cy="73.6" r="6.5"/>
+		<circle class="st0" cx="304.7" cy="72.5" r="6.5"/>
 	</g>
 	<g>
-		<circle class="st0" cx="379.9" cy="73.6" r="6.5"/>
+		<circle class="st0" cx="379.9" cy="72.5" r="6.5"/>
 	</g>
 </g>
 </svg>

@@ -13,6 +13,7 @@
 .pokedex {
   width: 100%;
   height: 100%;
+  display: flex;
 }
 .pokedex-footer {
   position: fixed;
@@ -24,6 +25,7 @@
   img {
     width: 100%;
     vertical-align: bottom;
+    z-index: 95;
   }
 }
 .pokemon-list {
@@ -36,7 +38,10 @@
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 110px;
-  padding-bottom: 150px;
+}
+.pokemon-empty {
+  width: 100%;
+  height: 135px;
 }
 .pokemon {
   width: 95px;

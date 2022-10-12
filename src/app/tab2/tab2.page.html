@@ -13,5 +13,5 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-favorites (saveFavoriteEvent)="saveFavorite($event)" [favorites]="favorites" [pokemons]="pokemons"></app-favorites>
+  <app-favorites (saveFavoriteEvent)="saveFavorite($event)" (getFavoritesEvent)="getFavorites()" [favorites]="favorites" [pokemons]="pokemons"></app-favorites>
 </ion-content>

@@ -13,7 +13,10 @@ export class FavoritesComponent {
 
   @Output() saveFavoriteEvent = new EventEmitter<any>();
 
+  @Output() getFavoritesEvent = new EventEmitter<any>();
+
   constructor() {
+    this.getFavoritesEvent.emit();
   }
 
   saveFavorite(id) {
