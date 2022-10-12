@@ -4,7 +4,7 @@
   </div>
   <div class="pokemon-list">
 
-    <div class="pokemon" *ngFor="let pokemon of pokemons; let i = index">
+    <div class="pokemon" *ngFor="let pokemon of pokemonsSort(); let i = index">
       <div class="pokemon-header">
         <span class="pokemon-number">{{formatID(pokemon?.id)}}</span>
         <ion-icon (click)="saveFavorite(pokemon.id)" class="pokemon-favorite is-favorite" name="heart"></ion-icon>

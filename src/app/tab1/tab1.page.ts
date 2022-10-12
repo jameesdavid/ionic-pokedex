@@ -11,8 +11,6 @@ export class Tab1Page {
 
   favorites = [];
 
-  pokemons = [];
-
   constructor(private restService: RestService, private storage: StorageService) {
   }
 
@@ -23,7 +21,9 @@ export class Tab1Page {
   getFavorites() {
     this.storage.get('favorites')
       .then((favorites) => {
-        this.favorites = favorites;
+        if (favorites) {
+          this.favorites = favorites;
+        }
       })
       .catch((error) => {
         console.log(error);

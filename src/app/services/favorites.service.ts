@@ -7,9 +7,9 @@ import { StorageService } from './storage.service';
 })
 export class FavoritesService {
 
-  public favoritesIDs;
+  public favoritesIDs = [];
 
-  public pokemonsFavorites;
+  public pokemonsFavorites = [];
 
   constructor(private restService: RestService, private storage: StorageService) { }
 
@@ -17,9 +17,9 @@ export class FavoritesService {
     this.storage.get('favorites')
       .then((favorites) => {
         this.favoritesIDs = favorites;
+        this.pokemonsFavorites = [];
         favorites.forEach((id) => {
           this.restService.getPokemonById(id).then((res) => {
-            console.log(res);
             this.pokemonsFavorites.push(res);
           });
         });

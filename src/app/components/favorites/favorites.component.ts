@@ -20,6 +20,10 @@ export class FavoritesComponent {
     this.saveFavoriteEvent.emit(id);
   }
 
+  pokemonsSort() {
+    return this.pokemons.sort((a,b) => a.id - b.id);
+  }
+
   formatID(id) {
     return '#'+(`${id}`).padStart(3, '0');
   }

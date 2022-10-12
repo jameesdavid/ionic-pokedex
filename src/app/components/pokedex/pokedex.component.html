@@ -12,7 +12,7 @@
     <div class="pokemon" *ngFor="let pokemon of pokemonsDetailed; let i = index">
       <div class="pokemon-header">
         <span class="pokemon-number">{{formatID(pokemon?.id)}}</span>
-        <ion-icon (click)="saveFavorite(pokemon.id)" class="pokemon-favorite" [ngClass]="{'is-favorite': verifyIfIsFavorite(pokemon.id) === 'heart'}" [name]="verifyIfIsFavorite(pokemon.id)"></ion-icon>
+        <ion-icon (click)="saveFavorite(pokemon.id)" class="pokemon-favorite" [ngClass]="{'is-favorite': verifyIfIsFavorite(pokemon?.id) === 'heart'}" [name]="verifyIfIsFavorite(pokemon?.id)"></ion-icon>
       </div>
       <div class="pokemon-image">
         <img height="80px" [src]="pokemon?.sprites?.other['official-artwork'].front_default">

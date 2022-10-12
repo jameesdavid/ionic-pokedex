@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { LoadingController } from '@ionic/angular';
 
 import { RestService } from './../../services/rest.service';
 import { StorageService } from '../../services/storage.service';
@@ -30,10 +31,26 @@ export class PokedexComponent implements OnInit {
 
   pokemonsSubscribe: Subscription;
 
-  constructor(private restService: RestService, private storage: StorageService) { }
+  constructor(private restService: RestService, private storage: StorageService, private loadingCtrl: LoadingController) {
+  }
 
   ngOnInit() {
     this.getPokemons();
+  }
+
+  async showLoading() {
+    const loading = await this.loadingCtrl.create({
+      cssClass: 'custom-loading',
+      id: 'loading'
+    });
+    return loading.present();
+  }
+
+  async dismissLoading() {
+    const overlayTop = await this.loadingCtrl.getTop();
+    if (overlayTop) {
+      this.loadingCtrl.dismiss({}, '', 'loading');
+    }
   }
 
   pageBack() {
@@ -52,7 +69,8 @@ export class PokedexComponent implements OnInit {
     this.getPokemons();
   }
 
-  getPokemons() {
+  async getPokemons() {
+    await this.showLoading();
     this.restService.pokemonGetAll(this.offset, this.limit).subscribe((pokemons: Pokemons) => {
       this.pokemons = pokemons;
       this.detailPokemons();
@@ -66,7 +84,7 @@ export class PokedexComponent implements OnInit {
       return poke;
     });
     this.pokemonsDetailed = await Promise.all(pokemonsPromise);
-    console.log(this.pokemonsDetailed);
+    this.dismissLoading();
   }
 
   saveFavorite(id) {
@@ -78,7 +96,10 @@ export class PokedexComponent implements OnInit {
   }
 
   verifyIfIsFavorite(id) {
-    return this.favorites.includes(id) ? 'heart' : 'heart-outline';
+    if (this.favorites && this.favorites.length > 0) {
+      return this.favorites.includes(id) ? 'heart' : 'heart-outline';
+    }
+    return 'heart-outline';
   }
 
 }

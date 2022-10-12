@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
 import { RestService } from '../services/rest.service';
 import { StorageService } from '../services/storage.service';
 
@@ -13,21 +14,36 @@ export class Tab2Page {
 
   pokemons = [];
 
-  constructor(private restService: RestService, private storage: StorageService) {
+  constructor(private restService: RestService, private storage: StorageService, private loadingCtrl: LoadingController) {
   }
 
   ionViewWillEnter() {
     this.getFavorites();
   }
 
-  getFavorites() {
-    this.storage.get('favorites')
-      .then((favorites) => {
+  async showLoading() {
+    const loading = await this.loadingCtrl.create({
+      cssClass: 'custom-loading',
+      id: 'loading'
+    });
+    return loading.present();
+  }
+
+  async dismissLoading() {
+    const overlayTop = await this.loadingCtrl.getTop();
+    if (overlayTop) {
+      this.loadingCtrl.dismiss({}, '', 'loading');
+    }
+  }
+
+  async getFavorites() {
+    await this.showLoading();
+    await this.storage.get('favorites')
+      .then(async (favorites) => {
         this.favorites = favorites;
         this.pokemons = [];
-        favorites.forEach((id) => {
+        await favorites.forEach((id) => {
           this.restService.getPokemonById(id).then((res) => {
-            console.log(res);
             this.pokemons.push(res);
           });
         });
@@ -35,6 +51,7 @@ export class Tab2Page {
       .catch((error) => {
         console.log(error);
       });
+    this.dismissLoading();
   }
 
   async checkFavorite(pokemonID) {
