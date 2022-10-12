@@ -33,7 +33,10 @@
   align-items: flex-start;
   overflow-y: auto;
   gap: 6px;
-  padding: 120px 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 110px;
+  padding-bottom: 140px;
 }
 .pokemon {
   width: 95px;
